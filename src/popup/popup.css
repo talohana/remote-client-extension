@@ -1,3 +1,27 @@
+body {
+    width: 600px; 
+    margin-left: 1px !important;
+}
+
+.nav-container {
+    margin-bottom: 5%;
+}
+
+.action-button {
+    width: 100%;
+    padding: 20% !important;
+    height: auto !important;
+ }
+
+.action-button .action-title {
+    font-size: 20px;
+    line-height: 20px;
+    vertical-align: middle;
+}
+
 .col {
-    background-color: green;
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+    height: 40%;
+    width: 40%;
 }

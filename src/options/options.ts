@@ -1,17 +1,18 @@
 import { ConfigService } from './../config/config.service';
 import '../../node_modules/materialize-css/dist/css/materialize.min.css';
 import '../../node_modules/materialize-css/dist/js/materialize.min.js';
+import { Config } from '../config/config';
 
-const snapshotInput = document.getElementById(
-	'snapshotServer'
-) as HTMLInputElement;
+document.getElementById('snapshotServer').addEventListener('input', onSnapshotServerInput);
 
 const submitButton = document.getElementById('submitButton');
 
 const configService = new ConfigService();
 
-configService.getConfig().then(config => {
-	snapshotInput.value = config.screenshotServer;
-});
+configService.getConfig().then(initializeFieldsWithCurrentConfig);
 
-submitButton.addEventListener('click', () => {});
+function initializeFieldsWithCurrentConfig(config: Config) {
+	(document.getElementById('snapshotServer') as HTMLInputElement).value = config.screenshotServer;
+}
+
+function onSnapshotServerInput(event: any) {}

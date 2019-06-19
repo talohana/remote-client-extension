@@ -1,3 +1,4 @@
+import { ScreenshotService } from './../services/screenshot.service';
 import * as moment from 'moment';
 import '../../node_modules/materialize-css/dist/css/materialize.min.css';
 import { ConsoleLogsService } from '../services/console-logs.service';
@@ -15,20 +16,15 @@ document
 
 document.getElementById('recordFPSButton').addEventListener('click', recordFPS);
 
+const screenshotService: ScreenshotService = new ScreenshotService();
+const consoleLogsService: ConsoleLogsService = new ConsoleLogsService();
+
 function takeScreenshot() {
-	chrome.runtime.sendMessage(
-		{ type: Messages.TAKE_SCREENSHOT },
-		({ dataUrl }) => {
-			chrome.downloads.download({
-				url: dataUrl,
-				saveAs: true
-			});
-		}
-	);
+	screenshotService.takeScreenshot();
 }
 
 function sendErrors() {
-	new ConsoleLogsService().sendLogsToServer();
+	consoleLogsService.sendLogsToServer();
 }
 
 function sendMessage() {}

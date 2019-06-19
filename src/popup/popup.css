@@ -14,8 +14,8 @@ body {
  }
 
 .action-button .action-title {
-    font-size: 20px;
-    line-height: 20px;
+    font-size: 19px;
+    line-height: 19px;
     vertical-align: middle;
 }
 
@@ -24,4 +24,12 @@ body {
     padding-bottom: 5px !important;
     height: 40%;
     width: 40%;
+}
+
+.brand-logo, .brand-logo img{
+    height: 100%;
+}
+
+.brand-logo img {
+    padding: 10px;
 }

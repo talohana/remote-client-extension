@@ -1,33 +1,30 @@
 {
-  "manifest_version": 2,
+	"manifest_version": 2,
 
-  "name": "Remote Client Extension",
-  "description": "Remote Client Reporter and Utilizer",
-  "version": "0.1",
+	"name": "Remote Client Extension",
+	"description": "Remote Client Reporter and Utilizer",
+	"version": "0.1",
 
-  "options_ui": {
-    "page": "options/options.html",
-    "chrome_style": true
-  },
+	"options_ui": {
+		"page": "options/options.html",
+		"chrome_style": true
+	},
 
-  "browser_action": {
-    "default_icon": "icon.png",
-    "default_popup": "popup/popup.html"
-  },
+	"browser_action": {
+		"default_icon": "icon.png",
+		"default_popup": "popup/popup.html"
+	},
 
-  "content_scripts": [
-      {
-          "matches": ["<all_urls>"],
-          "js": ["vendor.js", "content_script.js"]
-      }
-  ],
+	"content_scripts": [
+		{
+			"matches": ["<all_urls>"],
+			"js": ["vendor.js", "content_script.js"]
+		}
+	],
 
-  "background": {
-    "scripts": ["vendor.js", "background.js"]
-  },
+	"background": {
+		"scripts": ["vendor.js", "background.js"]
+	},
 
-  "permissions": [
-    "storage",
-    "<all_urls>"
-  ]
+	"permissions": ["storage", "activeTab", "tabs", "downloads", "<all_urls>"]
 }

@@ -1,3 +1,3 @@
 export const Config = {
-    fpsRecordTime: 15000
+	fpsRecordTime: 15000
 };

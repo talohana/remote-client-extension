@@ -12,7 +12,7 @@ const configService = new ConfigService();
 configService.getConfig().then(initializeFieldsWithCurrentConfig);
 
 function initializeFieldsWithCurrentConfig(config: Config) {
-	(document.getElementById('snapshotServer') as HTMLInputElement).value = config.screenshotServer;
+	(document.getElementById('snapshotServer') as HTMLInputElement).value = config.screenshotEndpoint;
 }
 
 function onSnapshotServerInput(event: any) {}

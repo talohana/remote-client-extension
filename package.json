@@ -15,11 +15,13 @@
     "url": "https://github.com/chibat/chrome-extension-typescript-starter.git"
   },
   "dependencies": {
+    "axios": "^0.19.0",
     "materialize-css": "^1.0.0-rc.2",
     "moment": "~2.24.0"
   },
   "devDependencies": {
     "@types/chrome": "~0.0.83",
+    "@types/materialize-css": "^1.0.6",
     "copy-webpack-plugin": "^5.0.3",
     "css-loader": "^3.0.0",
     "rimraf": "^2.6.3",

@@ -1,18 +1,33 @@
 import { Messages } from './models/messages.model';
-import { MessagingConfig } from './messaging.config';
+import { TabsService } from './services/tabs.service';
+import { Config } from './config/config';
+import Axios from 'axios';
 
-chrome.runtime.onMessage.addListener((messageData, sender, sendResponse) => {
+const tabsService: TabsService = new TabsService();
+
+chrome.runtime.onMessage.addListener(async (messageData, sender, sendResponse) => {
 	switch (messageData.type) {
 		case Messages.TAKE_SCREENSHOT: {
-			chrome.tabs.captureVisibleTab(null, { format: 'png' }, function (dataUrl) {
-				sendResponse({ dataUrl });
-			});
+			chrome.tabs.captureVisibleTab({ format: 'png' }, sendDataURLToWebhook);
+
+			break;
+		}
+		case Messages.FPS_RECORD_DONE: {
+			sendFPSRecocrdToWebhook(messageData.fpsRecord);
 		}
 	}
 
-	if (messageData.message === MessagingConfig.fpsRecordDone) {
-		console.log(messageData.fpsRecord);
-	}
-
-	return Promise.resolve();
+	return true;
 });
+
+async function sendDataURLToWebhook(dataUrl: string, ) {
+	const hostUrl = await tabsService.getActiveTabHostUrl();
+
+	Axios.post(`${hostUrl}${Config.screenshotEndpoint}`, { dataUrl });
+}
+
+async function sendFPSRecocrdToWebhook(fpsRecord) {
+	const hostUrl = await tabsService.getActiveTabHostUrl();
+
+	Axios.post(`${hostUrl}${Config.fpsRecordEndpoint}`, { fpsRecord });
+}

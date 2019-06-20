@@ -1,4 +1,4 @@
-import { MessagingConfig } from "./messaging.config";
+import { Messages } from "./models/messages.model";
 
 let fps;
 
@@ -15,14 +15,12 @@ const times = [];
     times.push(now);
     fps = times.length;
 
-    console.log(fps);
-
     fpsHandler();
   });
 })()
 
 chrome.runtime.onMessage.addListener(function (messageData, sender, sendResponse) {
-  if (messageData.message === MessagingConfig.fpsRecordInit) {
+  if (messageData.type === Messages.FPS_RECORD_INIT) {
     startRecording(messageData.fpsRecordTime / 1000);
   }
 });
@@ -40,5 +38,5 @@ function startRecording(fpsRecordTime) {
 }
 
 function postRecord(fpsRecord) {
-  chrome.runtime.sendMessage({ message: MessagingConfig.fpsRecordDone, fpsRecord }, console.log);
+  chrome.runtime.sendMessage({ type: Messages.FPS_RECORD_DONE, fpsRecord }, console.log);
 }

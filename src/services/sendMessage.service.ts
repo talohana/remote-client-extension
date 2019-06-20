@@ -35,8 +35,7 @@ export class SendMessageService {
 		document.body.appendChild(myDialog);
 		myDialog.showModal();
 		okButton.onclick = () => {
-			let i = (document.getElementById('description') as HTMLTextAreaElement).value;
-			({ i }) => this.sendProblem(i);
+			this.sendProblem((document.getElementById('description') as HTMLTextAreaElement).value);
 			document.body.removeChild(myDialog);
 		};
 		nevermindButton.onclick = () => {
@@ -45,8 +44,8 @@ export class SendMessageService {
 	}
 
 	private async sendProblem(description: string) {
-		const hostname = await this.tabsService.getActiveTabHostname();
+		const hostUrl = await this.tabsService.getActiveTabHostUrl();
 		const { sendMessageEndpoint } = await this.configService.getConfig();
-		//Axios.post(`${hostname}${sendMessageEndpoint}`, { description });
+		Axios.post(`${hostUrl}${sendMessageEndpoint}`, { description });
 	}
 }

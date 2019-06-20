@@ -7,8 +7,9 @@ export class TabsService {
 		});
 	}
 
-	async getActiveTabHostname(): Promise<string> {
+	async getActiveTabHostUrl(): Promise<string> {
 		const { url } = await this.getActiveTab();
-		return new URL(url).hostname;
+		const { protocol, host, pathname } = new URL(url);
+		return `${protocol}//${host}`;
 	}
 }

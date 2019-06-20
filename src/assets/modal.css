@@ -1,0 +1,27 @@
+.dialog-box {
+	border: none;
+	border-radius: 5px;
+}
+
+.dialog-box label {
+	font-size: 5vh;
+}
+
+.btn.ok {
+	background-color: rgba(52, 202, 52, 0.788);
+	border: rgba(52, 202, 52, 0.788);
+	margin-right: 2px;
+}
+
+.btn.ok:hover {
+	background-color: rgba(52, 202, 52, 0.671);
+}
+
+.btn.nevermind {
+	background-color: rgba(255, 0, 0, 0.575);
+	border: rgba(255, 0, 0, 0.575);
+}
+
+.btn.nevermind:hover {
+	background-color: rgba(255, 0, 0, 0.425);
+}

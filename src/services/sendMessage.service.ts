@@ -1,8 +1,10 @@
 import { ConfigService } from './../config/config.service';
+import { TabsService } from './tabs.service';
 import Axios from 'axios';
 
 export class SendMessageService {
 	private configService: ConfigService = new ConfigService();
+	private tabsService: TabsService = new TabsService();
 
 	sendMessage() {
 		let messageBox = document.createElement('form');
@@ -43,7 +45,8 @@ export class SendMessageService {
 	}
 
 	private async sendProblem(description: string) {
-		const { messageServer } = await this.configService.getConfig();
-		Axios.post(messageServer, description);
+		const hostname = await this.tabsService.getActiveTabHostname();
+		const { sendMessageEndpoint } = await this.configService.getConfig();
+		Axios.post(`${hostname}${sendMessageEndpoint}`, { description });
 	}
 }

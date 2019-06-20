@@ -6,6 +6,5 @@ export interface Config {
 
 export const defaultConfig: Config = {
 	fpsRecordTime: 15000,
-	screenshotEndpoint: '/clientExtension/screenshot',
-	sendMessageEndpoint: '/clientExtension/message'
+	screenshotEndpoint: '/support/screenshot'
 };

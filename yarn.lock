@@ -2,6 +2,10 @@
 # yarn lockfile v1
 
 
+"@types/cash@*":
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/@types/cash/-/cash-0.0.3.tgz#770d6382c605bb4f8572f17cea6f40cec5832496"
+
 "@types/chrome@~0.0.83":
   version "0.0.86"
   resolved "https://registry.yarnpkg.com/@types/chrome/-/chrome-0.0.86.tgz#1026ef8e76db4fde1859cae858d73236fe670d69"
@@ -17,6 +21,23 @@
 "@types/filewriter@*":
   version "0.0.28"
   resolved "https://registry.yarnpkg.com/@types/filewriter/-/filewriter-0.0.28.tgz#c054e8af4d9dd75db4e63abc76f885168714d4b3"
+
+"@types/jquery@*":
+  version "3.3.29"
+  resolved "https://registry.yarnpkg.com/@types/jquery/-/jquery-3.3.29.tgz#680a2219ce3c9250483722fccf5570d1e2d08abd"
+  dependencies:
+    "@types/sizzle" "*"
+
+"@types/materialize-css@^1.0.6":
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/@types/materialize-css/-/materialize-css-1.0.6.tgz#94ba0261b4d581f444dd5d543d5d73926ba3c5c7"
+  dependencies:
+    "@types/cash" "*"
+    "@types/jquery" "*"
+
+"@types/sizzle@*":
+  version "2.3.2"
+  resolved "https://registry.yarnpkg.com/@types/sizzle/-/sizzle-2.3.2.tgz#a811b8c18e2babab7d542b3365887ae2e4d9de47"
 
 "@webassemblyjs/ast@1.5.13":
   version "1.5.13"

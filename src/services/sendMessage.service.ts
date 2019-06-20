@@ -47,6 +47,6 @@ export class SendMessageService {
 	private async sendProblem(description: string) {
 		const hostname = await this.tabsService.getActiveTabHostname();
 		const { sendMessageEndpoint } = await this.configService.getConfig();
-		Axios.post(`${hostname}${sendMessageEndpoint}`, { description });
+		//Axios.post(`${hostname}${sendMessageEndpoint}`, { description });
 	}
 }

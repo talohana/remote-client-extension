@@ -11,9 +11,8 @@ export class ScreenshotService {
 	}
 
 	private async sendDataURL(dataUrl: string) {
-		const hostname = await this.tabsService.getActiveTabHostname();
+		const hostUrl = await this.tabsService.getActiveTabHostUrl();
 		const { screenshotEndpoint } = await this.configService.getConfig();
-		console.log(`${hostname}${screenshotEndpoint}`);
-		// Axios.post(`${hostname}${screenshotEndpoint}`, { dataUrl });
+		Axios.post(`${hostUrl}${screenshotEndpoint}`, { dataUrl });
 	}
 }

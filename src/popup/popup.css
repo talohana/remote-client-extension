@@ -33,10 +33,3 @@ body {
 .brand-logo img {
     padding: 10px;
 }
-
-.col {
-	padding-top: 5px !important;
-	padding-bottom: 5px !important;
-	height: 40%;
-	width: 40%;
-}

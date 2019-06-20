@@ -1,7 +1,7 @@
 export class TabsService {
 	getActiveTab(): Promise<chrome.tabs.Tab> {
 		return new Promise((resolve, reject) => {
-			chrome.tabs.query({ active: true }, ([activeTab]) => {
+			chrome.tabs.query({ active: true, lastFocusedWindow: true }, ([activeTab]) => {
 				resolve(activeTab);
 			});
 		});

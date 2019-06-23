@@ -1,68 +1,21 @@
-# Chrome Extension TypeScript Starter
+# Welcome to your Remote Client Extension!
 
-[![Build Status](https://travis-ci.org/chibat/chrome-extension-typescript-starter.svg?branch=master)](https://travis-ci.org/chibat/chrome-extension-typescript-starter)
+Hi!
+We developed a <code>Generic</code> yet <code>Simple</code> extension for End-users in any website to help solving their issues. You may consider it as a Generic Support Extension.
 
-Chrome Extension, TypeScript and Visual Studio Code
+# Usage
+Create the following endpoints in your server:
 
-## Prerequisites
+<code>/client-support/screenshot</code>
+An endpoint to which a user will send a 64-base PNG screenshot.
 
-* [node + npm](https://nodejs.org/) (Current Version)
+<code>/client-support/fps</code>
+An endpoint to which a user will send an array representing last 15 seconds of his FPS.
+The FPS is measured once in 30 seconds.
 
-## Option
+<code>/client-support/message</code>
+An endpoint to which a user will send a message.
 
-* [Visual Studio Code](https://code.visualstudio.com/)
-
-## Includes the following
-
-* TypeScript
-* Webpack
-* Moment.js
-* jQuery
-* Example Code
-    * Chrome Storage
-    * Options Version 2
-    * content script
-    * count up badge number
-    * background
-
-## Project Structure
-
-* src/typescript: TypeScript source files
-* src/assets: static files
-* dist: Chrome Extension directory
-* dist/js: Generated JavaScript files
-
-## Setup
-
-```
-npm install
-```
-
-## Import as Visual Studio Code project
-
-...
-
-## Build
-
-```
-npm run build
-```
-
-## Build in watch mode
-
-### terminal
-
-```
-npm run watch
-```
-
-### Visual Studio Code
-
-Run watch mode.
-
-type `Ctrl + Shift + B`
-
-## Load extension to chrome
-
-Load `dist` directory
-
+# Notes
+- The extension send the data to the url of the website.
+e.g. https://www.foo-bar.com - the extension will send a screenshot to <code>https://www.foo-bar.com/client-support/screenshot</code>

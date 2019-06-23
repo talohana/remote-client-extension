@@ -15,13 +15,16 @@ body {
 	flex-direction: column;
 }
 
-.brand-logo,
-.brand-logo img {
+.brand-logo, .brand-logo img {
 	height: 100%;
 }
 
 .brand-logo img {
 	padding: 10px;
+}
+
+.action-buttons-container {
+	background-color: #ecf0f1;
 }
 
 .action-buttons-container .action-buttons {
@@ -48,20 +51,15 @@ body {
   transition: all 0.2s ease;
 }
 
-.action-buttons-container .action-buttons .action-button:hover {
-  color: #2d3436;
+.action-buttons-container .action-buttons .action-button:hover,
+.action-buttons-container .action-buttons .action-button:hover a {
+  color: #af4448;
   box-shadow: 0 0 15px #ee6e73;
 }
 
 .action-buttons-container .action-buttons .action-button a {
 	text-decoration: none;
 	color: white;
-}
-
-.action-buttons-container .action-buttons .action-button a:hover {
-	text-decoration: none;
-	color: #2d3436;
-	box-shadow: 0 0 15px #ee6e73;
 }
 
 .action-buttons-container .action-button-1 {
@@ -75,4 +73,8 @@ body {
 }
 .action-buttons-container .action-button-4 {
   transform: translate3d(50px, -50px, 0);
+}
+
+.page-footer {
+	padding: 0 !important;
 }

@@ -1,11 +1,10 @@
-import { ScreenshotService } from './../services/screenshot.service';
-import * as moment from 'moment';
-import '../../node_modules/materialize-css/dist/css/materialize.min.css';
-import { ConsoleLogsService } from '../services/console-logs.service';
-import { Messages } from '../models/messages.model';
+import '../styles';
 import { Config } from '../config/config';
-import { SendMessageService } from './../services/sendMessage.service';
+import { Messages } from '../models/messages.model';
+import { ConsoleLogsService } from '../services/console-logs.service';
 import { TabsService } from '../services/tabs.service';
+import { ScreenshotService } from './../services/screenshot.service';
+import { SendMessageService } from './../services/sendMessage.service';
 
 document.getElementById('takeScreenshotButton').addEventListener('click', takeScreenshot);
 document.getElementById('sendErrorsButton').addEventListener('click', sendErrors);

@@ -1,29 +1,5 @@
 body {
-	width: 600px;
-	margin-left: 1px !important;
-}
-
-.nav-container {
-	margin-bottom: 5%;
-}
-
-.action-button {
-	width: 100%;
-	padding: 20% !important;
-	height: auto !important;
-}
-
-.action-button .action-title {
-	font-size: 19px;
-	line-height: 19px;
-	vertical-align: middle;
-}
-
-.col {
-	padding-top: 5px !important;
-	padding-bottom: 5px !important;
-	height: 40%;
-	width: 40%;
+	width: 300px;
 }
 
 .brand-logo,
@@ -33,4 +9,65 @@ body {
 
 .brand-logo img {
 	padding: 10px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.action-buttons-container .action-buttons {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  filter: url("#goo");
+}
+.action-buttons-container .action-buttons .action-button {
+  position: absolute;
+  left: 65px;
+  top: 65px;
+  width: 70px;
+  height: 70px;
+  text-align: center;
+  line-height: 70px;
+  font-weight: 700;
+  font-size: 30px;
+  font-family: sans-serif;
+  background: #ee6e73;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.action-buttons-container .action-buttons .action-button:hover {
+  color: #2d3436;
+  box-shadow: 0 0 15px #ee6e73;
+}
+
+.action-buttons-container .action-buttons .action-button a {
+	text-decoration: none;
+	color: white;
+}
+
+.action-buttons-container .action-buttons .action-button a:hover {
+	text-decoration: none;
+	color: #2d3436;
+	box-shadow: 0 0 15px #ee6e73;
+}
+
+.action-buttons-container .action-button-1 {
+  transform: translate3d(-50px, -50px, 0);
+}
+.action-buttons-container .action-button-2 {
+  transform: translate3d(-50px, 50px, 0);
+}
+.action-buttons-container .action-button-3 {
+  transform: translate3d(50px, 50px, 0);
+}
+.action-buttons-container .action-button-4 {
+  transform: translate3d(50px, -50px, 0);
 }

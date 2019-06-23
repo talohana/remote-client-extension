@@ -9,44 +9,46 @@
 </head>
 
 <body>
-	<nav class="nav-container">
-		<div class="nav-wrapper">
-			<a href="#" class="brand-logo left">
-				<img src="../assets/logo.png" />
-			</a>
-			<ul class="right">
-				<li><a href="#">About</a></li>
-			</ul>
-		</div>
-	</nav>
-	<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="0" height="0">
-		<defs>
-			<filter id="goo">
-				<feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
-				<feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7"
-					result="goo" />
-				<feBlend in="SourceGraphic" in2="goo" />
-			</filter>
-		</defs>
-	</svg>
-	<div class="action-buttons-container">
-		<div class="action-buttons">
-			<div class="action-button action-button-4" id="takeScreenshotButton">
-				<i class="fa fa-expand"></i>
-			</div>
-			<div class="action-button action-button-3" id="sendErrorsButton">
-				<i class="fa fa-info"></i>
-			</div>	
-			<div class="action-button action-button-2" id="sendMessageButton">
-				<i class="fa fa-comment-dots"></i>
-			</div>
-			<div class="action-button action-button-1" id="recordFPSButton">
-				<i class="fa fa-tachometer-alt"></i>
-			</div>
-			<div class="action-button">
-				<a href="https://github.com/talohana/remote-client-extension">
-					<i class="fab fa-github"></i>
+	<div class="popup-container">
+		<nav class="nav-container">
+			<div class="nav-wrapper">
+				<a href="#" class="brand-logo left">
+					<img src="../assets/logo.png" />
 				</a>
+				<ul class="right">
+					<li><a href="#">About</a></li>
+				</ul>
+			</div>
+		</nav>
+		<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="0" height="0">
+			<defs>
+				<filter id="goo">
+					<feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+					<feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7"
+						result="goo" />
+					<feBlend in="SourceGraphic" in2="goo" />
+				</filter>
+			</defs>
+		</svg>
+		<div class="action-buttons-container">
+			<div class="action-buttons">
+				<div class="action-button action-button-4" id="takeScreenshotButton">
+					<i class="fa fa-expand"></i>
+				</div>
+				<div class="action-button action-button-3" id="sendErrorsButton">
+					<i class="fa fa-info"></i>
+				</div>
+				<div class="action-button action-button-2" id="sendMessageButton">
+					<i class="fa fa-comment-dots"></i>
+				</div>
+				<div class="action-button action-button-1" id="recordFPSButton">
+					<i class="fa fa-tachometer-alt"></i>
+				</div>
+				<div class="action-button">
+					<a href="https://github.com/talohana/remote-client-extension" target="_blank">
+						<i class="fab fa-github"></i>
+					</a>
+				</div>
 			</div>
 		</div>
 	</div>

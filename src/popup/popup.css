@@ -1,5 +1,18 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
 	width: 300px;
+}
+
+.popup-container {
+	display: flex;
+	flex-direction: column;
 }
 
 .brand-logo,
@@ -11,18 +24,10 @@ body {
 	padding: 10px;
 }
 
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 .action-buttons-container .action-buttons {
   width: 200px;
   height: 200px;
-  margin: 0 auto;
+  margin: auto;
   filter: url("#goo");
 }
 .action-buttons-container .action-buttons .action-button {

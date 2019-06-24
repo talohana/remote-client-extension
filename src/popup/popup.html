@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="UTF-8" />
-	<title>Getting Started Extension's Popup</title>
+	<title>Remote Client Extension</title>
 	<link rel="stylesheet" href="./popup.css" />
 	<link rel="stylesheet" href="../styles/modal.css" />
 </head>
@@ -12,11 +12,11 @@
 	<div class="popup-container">
 		<nav class="nav-container">
 			<div class="nav-wrapper">
-				<a href="#" class="brand-logo left">
+				<a href="/popup/popup.html" class="brand-logo left">
 					<img src="../assets/logo.png" />
 				</a>
 				<ul class="right">
-					<li><a href="#">About</a></li>
+					<li><a href="/about/about.html">About</a></li>
 				</ul>
 			</div>
 		</nav>
@@ -36,7 +36,9 @@
 					<i class="fa fa-expand"></i>
 				</div>
 				<div class="action-button action-button-3" id="sendErrorsButton">
-					<i class="fa fa-info"></i>
+					<a href="/about/about.html">
+						<i class="fa fa-info"></i>
+					</a>
 				</div>
 				<div class="action-button action-button-2" id="sendMessageButton">
 					<i class="fa fa-comment-dots"></i>
@@ -55,13 +57,11 @@
 	<footer class="page-footer">
 		<div class="footer-copyright">
 			<div class="container">
-				Super-powered by "The Parliament" ©2019. Code licensed under an MIT-style License				
+				Super-powered by "The KoGs" ©2019. Code licensed under an MIT-style License
 			</div>
 		</div>
 	</footer>
 </body>
-
 <script src="../vendor.js"></script>
 <script src="./popup.js"></script>
-
 </html>

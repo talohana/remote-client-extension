@@ -1,0 +1,55 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    width: 540px;
+    max-height: 310px;
+}
+
+.about-text {
+    max-height: 200px;
+    overflow-y: scroll;
+    font-size: 1.1rem;
+    padding: 10px;
+    background-color: #ecf0f1;
+}
+
+.about-text h1 {
+    color: #ee6e73;
+    width: fit-content;
+    font-weight: 700;
+    font-size: 2rem;
+    margin: 1rem 0;
+}
+
+.about-text h1:hover {
+    opacity: 0.8;
+}
+
+.about-container {
+	display: flex;
+	flex-direction: column;
+}
+
+.brand-logo, .brand-logo img {
+	height: 100%;
+}
+
+.brand-logo img {
+	padding: 10px;
+}
+
+.page-footer {
+	padding: 0 !important;
+}
+
+.code {
+    background-color: rgba(0,0,0,.05);
+    border-radius: 3px;
+    padding: 2px 4px;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Remote Client Extension</title>
+
+    <link rel="stylesheet" href="./about.css">
+</head>
+
+<body>
+    <div class="about-container">
+        <nav class="nav-container">
+            <div class="nav-wrapper">
+                <a href="/popup/popup.html" class="brand-logo left">
+                    <img src="../assets/logo.png" />
+                </a>
+                <ul class="right">
+                    <li><a href="/popup/popup.html"><i class="fa fa-arrow-left"></i></a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="about-text">
+            <h1 id="welcome-to-your-remote-client-extension">Welcome to Remote Client Extension!</h1>
+            <p>Hi! We developed a <mark class="code">Generic</mark> yet <mark class="code">Simple</mark>
+                extension for End-users in any website to help solving their issues. You may consider it as a Generic
+                Support Extension.
+            </p>
+            <h1 id="usage">Usage</h1>
+            <p>Create the following endpoints in your server:</p>
+            <p>
+                <mark class="code">/client-support/screenshot</mark>
+                An endpoint to which a user will send a 64-base PNG screenshot.
+            </p>
+            <p>
+                <mark class="code">/client-support/fps</mark>
+                An endpoint to which a user will send an array representing last 15 seconds of his FPS. The FPS is
+                measured once in 30 seconds.
+            </p>
+            <p>
+                <mark class="code">/client-support/message</mark> An endpoint to which a user will send a message.
+            </p>
+            <h1 id="notes">Notes</h1>
+            <ul>
+                <li>The extension send the data to the url of the website. e.g. https://www.foo-bar.com - the extension
+                    will
+                    send a screenshot to <mark class="code">https://www.foo-bar.com/client-support/screenshot</mark>
+                </li>
+            </ul>
+        </div>
+        <footer class="page-footer">
+            <div class="footer-copyright">
+                <div class="container">
+                    Super-powered by "The KoGs" ©2019. Code licensed under an MIT-style License
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+<script src="../vendor.js"></script>
+<script src="./about.js"></script>
+
+</html>
